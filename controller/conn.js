@@ -1,7 +1,5 @@
 'use strict'
-
 const mysql = require('mysql2')
-
 module.exports = class Connection{
 
     constructor(server){
@@ -48,7 +46,6 @@ module.exports = class Connection{
 
 
     async get_result(query, params=null){
-
 
     try{
         
@@ -144,8 +141,6 @@ module.exports = class Connection{
                 return err
 
     }
-
-
     }
 
 }
@@ -158,13 +153,13 @@ module.exports = class Connection{
  * 
  * {
 
-"servers":[{
+    example{
     "name": "example",
     "host": "localhost",
     "user": "root",
     "password": "pass",
     "db": "mydb" 
-}]    
+}    
 }
  */
 

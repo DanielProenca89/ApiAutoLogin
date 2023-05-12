@@ -4,20 +4,10 @@
     "name": "auth",
     "host": "localhost",
     "user": "root",
-    "password": "18a80b01c",
-    "db": "siga-auth"    
+    "password": "root",
+    "db": "auth"    
 
-    },    
-
-    "siga":{
-        "name": "siga",
-        "host": "localhost",
-        "user": "root",
-        "password": "18a80b01c",
-        "db": "siga"    
-    
-        } 
-
+    }
 }
 
 

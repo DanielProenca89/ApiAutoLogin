@@ -1,5 +1,4 @@
-const express    = require('express');
-const bodyParser = require('body-parser');
+const express = require('express');
 require('dotenv').config()
 
 
@@ -9,8 +8,7 @@ module.exports = () => {
   // SETANDO VARIÁVEIS DA APLICAÇÃO
   app.set('port', process.env.PORT);
 
-  // MIDDLEWARES
-  app.use(bodyParser.json());
+
 
   return app;
 };
