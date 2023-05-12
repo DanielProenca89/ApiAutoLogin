@@ -25,7 +25,7 @@ async function login(req, res){
     const token = jwt.sign({ id }, process.env.SECRET, {
       expiresIn:'7d'
     });
-
+    await conn.insert("sessions", {userId:id, token:token, startTs:new Date().toISOString()})
     return res.status(200).json({ auth: true, name:query[0].name, id:query[0].id, token: token, message:'ok'});
 
     }else{

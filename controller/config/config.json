@@ -7,7 +7,14 @@
     "password": "root",
     "db": "auth"    
 
-    }
+    },
+    "tools":{
+    "name": "tools",
+    "host": "localhost",
+    "user": "root",
+    "password": "root",
+    "db": "tools"  
+    }  
 }
 
 
