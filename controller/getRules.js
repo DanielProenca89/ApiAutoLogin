@@ -7,8 +7,6 @@ function encrypt(token, ts, data){
     // Cria um valor hash SHA-256 a partir da chave
     const key = crypto.createHash('sha256').update(token).digest('hex').slice(0,32);
 
-
-
     // Cria um valor hash SHA-128 a partir da chave
     const iv = crypto.createHash('sha1').update(ts).digest('hex').slice(0,16);
     console.log(iv)
