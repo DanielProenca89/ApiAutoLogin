@@ -1,5 +1,6 @@
 const app = require('./express')();
 const port = app.get('port');
+const cors = require('cors');
 const loginRoute = require('./routes/login')
 const getRulesRoute = require('./routes/getRules')
 const createUser = require('./routes/createUser')
@@ -11,6 +12,9 @@ app.use(bodyParser.json());
 app.use(loginRoute)
 app.use(getRulesRoute)
 app.use(createUser)
+app.use(cors({
+  origin: '*'
+}));
 
 // RODANDO NOSSA APLICAÇÃO NA PORTA SETADA
 app.listen(port, () => {

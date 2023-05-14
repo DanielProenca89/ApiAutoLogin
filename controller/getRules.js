@@ -1,9 +1,9 @@
 const Connection = require('./conn')
 const config = require('./config/config.json')
-const crypto = require('crypto');
+const CryptoJS = require("crypto-js");
 
 
-function encrypt(token, ts, data){
+/*function encrypt(token, ts, data){
     // Cria um valor hash SHA-256 a partir da chave
     const key = crypto.createHash('sha256').update(token).digest('hex').slice(0,32);
 
@@ -23,15 +23,25 @@ function encrypt(token, ts, data){
 function decrypt(token, ts, encrypted){
 
     const key = crypto.createHash('sha256').update(token).digest('hex').slice(0,32);
-
+    console.log("chave: " + key)
     // Cria um valor hash SHA-128 a partir da chave
     const iv = crypto.createHash('sha1').update(ts).digest('hex').slice(0,16);
+    console.log("iv: " + iv)
 
     const decipher = crypto.createDecipheriv('aes-256-cbc', key, iv);
     let decrypted = decipher.update(encrypted, 'hex', 'utf8');
     decrypted += decipher.final('utf8');
     return decrypted;
+}*/
+
+function encrypt(token, info){
+    const encrypted = CryptoJS.AES.encrypt(info, token);
+    return encrypted
 }
+
+
+
+
 
 async function getRules(req, res){
 
@@ -42,11 +52,12 @@ async function getRules(req, res){
     const link  = req.query.link
     const token = req.headers['x-access-token']
     const ts = req.query.ts
-    const query  = await conn.get_result("select * from vw_rules where link = ?", {link:link})
+    const query  = await conn.get_result("select * from vw_rules")
 
     if(query[0]){
-        const encryptedInfo = encrypt(token, ts, JSON.stringify(query[0]))
-        res.status(200).json({data:encryptedInfo})
+        const encryptedInfo = encrypt(token.toString(), JSON.stringify(query))
+        console.log(encryptedInfo.toString())
+        res.status(200).json({data:encryptedInfo.toString()})
     }else{
         res.status(204).json({data:""})
     }

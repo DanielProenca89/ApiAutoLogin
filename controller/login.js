@@ -20,6 +20,7 @@ async function login(req, res){
     const body =  Object.values(req.body)
     console.log(body)
     const query = await conn.get_result("select * from vw_auth where user = ? and password = ?", {username:body[0], password:body[1]})
+    console.log(query)
     if(query[0]){ 
     const id = query[0].id; 
     const token = jwt.sign({ id }, process.env.SECRET, {

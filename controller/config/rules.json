@@ -1,0 +1,66 @@
+[
+    {
+        "url": "https://app.minea.com/pt/auth/login",
+        "inputUserXpath": "/html/body/div[1]/div[3]/div/main/div/div/div/div/div[2]/form/div/label[1]/input",
+        "inputPwdXpath": "/html/body/div[1]/div[3]/div/main/div/div/div/div/div[2]/form/div/label[2]/input",
+        "submitXpath": "/html/body/div[1]/div[3]/div/main/div/div/div/div/div[2]/form/div/button",
+        "user": "adspy19913@valanides.com",
+        "password": "Spy123"
+    },
+    {
+        "url": "https://bigspy.com/user/login",
+        "inputUserXpath": "/html/body/div/div[2]/div[2]/div/div/form/div[1]/div/input",
+        "inputPwdXpath": "/html/body/div/div[2]/div[2]/div/div/form/div[2]/input",
+        "submitXpath": "/html/body/div/div[2]/div[2]/div/div/form/div[7]/button",
+        "user": "silva12312312@bugfoo.com",
+        "password": "Spy12345"
+    },
+    {
+        "url": "https://findniche.com/user/login",
+        "inputUserXpath": "/html/body/div/div[2]/div[2]/div/div/form/div[1]/div/input",
+        "inputPwdXpath": "/html/body/div/div[2]/div[2]/div/div/form/div[2]/input",
+        "submitXpath": "/html/body/div/div[2]/div[2]/div/div/form/div[7]/button",
+        "user": "silva12312312@bugfoo.com",
+        "password": "Spy12345"
+    },
+    {
+        "url": "https://www.pipiads.com/login",
+        "inputUserXpath": "/html/body/div/div[1]/div[2]/div/div[2]/form/div[1]/div/div[1]/input",
+        "inputPwdXpath": "/html/body/div/div[1]/div[2]/div/div[2]/form/div[2]/div/div[1]/input",
+        "submitXpath": "/html/body/div/div[1]/div[2]/div/button",
+        "user": "silva12312312@bugfoo.com",
+        "password": "Spy12345"
+    },
+    {
+      "url": "https://www.sellthetrend.com/login",
+      "inputUserXpath": "/html/body/main/div/div/div/form/div[2]/div/div[1]/input",
+      "inputPwdXpath": "/html/body/main/div/div/div/form/div[3]/div/div[1]/input",
+      "submitXpath": "/html/body/main/div/div/div/form/button[3]",
+      "user": "silva12312312@bugfoo.com",
+      "password": "Spy12345"
+    },
+    {
+      "url": "https://droptool.com.br/",
+      "inputUserXpath": "/html/body/div[3]/div/div/div[2]/div[1]/form/div[1]/input",
+      "inputPwdXpath": "/html/body/div[3]/div/div/div[2]/div[1]/form/div[2]/input",
+      "submitXpath": "/html/body/div[3]/div/div/div[2]/div[1]/form/div[3]/button",
+      "user": "adspy19913@valanides.com",
+      "password": "Spy123"
+    },
+    {
+      "url": "https://nichescraper.com/login.php",
+      "inputUserXpath": "//html/body/div[2]/form/div[1]/input",
+      "inputPwdXpath": "/html/body/div[2]/form/div[2]/input",
+      "submitXpath": "/html/body/div[2]/form/button",
+      "user": "silva12312312@bugfoo.com",
+      "password": "Spy12345"
+    },
+    {
+      "url": "https://vav.tubesift.com/",
+      "inputUserXpath": "/html/body/div[3]/form[1]/div[10]/div/input",
+      "inputPwdXpath": "/html/body/div[3]/form[1]/div[11]/div/input",
+      "submitXpath": "/html/body/div[3]/form[1]/div[12]/button",
+      "user": "vaawev@bugfoo.com",
+      "password": "1ea6fd8096"
+    }
+]
